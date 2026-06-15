@@ -9,7 +9,7 @@
     @vite(['resources/css/app.css','resources/js/app.js'])
 
 </head>
-<body class="d-flex flex-column min-vh-100 container p-0">
+<body class="d-flex flex-column min-vh-100 p-0 container">
     <x-navbar></x-navbar>
     <x-alerts></x-alerts>
     {{$slot}}

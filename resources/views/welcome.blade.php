@@ -1,104 +1,109 @@
 <x-layout>
 
-    {{-- HERO SECTION --}}
-    <section class="bg-primary text-white py-5">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-7">
-                    <h1 class="display-5 fw-bold">Compra o Vendi il tuo Immobile</h1>
-                    <p class="lead">Trova la tua prossima casa in vendita o in affitto vicino a te. Inserisci una città o una parola chiave.</p>
+{{-- HERO --}}
+<section style="background: linear-gradient(135deg, #0a2342 0%, #185FA5 50%, #1a8a6e 100%); padding: 130px 0; color: #fff;">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-md-7">
+                <span class="badge rounded-pill mb-3" style="background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2); font-size: 12px; color: rgba(255,255,255,0.85); padding: 6px 14px;">
+                    🏡 Mercato immobiliare
+                </span>
+                <h1 class="fw-bold lh-sm" style="font-size: 2.4rem;">Compra o vendi il tuo immobile</h1>
+                <p class="mt-3" style="opacity: 0.85; font-size: 1.05rem;">
+                    Trova la tua prossima casa in vendita o in affitto. Inserisci una città o una parola chiave.
+                </p>
 
-                    <x-filter-home :properties="$properties"></x-filter-home>
+                <x-filter-home :properties="$properties"></x-filter-home>
 
-                    <small class="text-light mt-2 d-block">Consigli: prova "Bilocale", "Residence", "Milano"</small>
-                </div>
-                <div class="col-md-5 text-center">
-                    <img src="{{ asset('image/logo.png') }}" class="img-fluid w-75" alt="Logo">
+                <small class="d-block mt-2" style="opacity: 0.6;">Prova: "Bilocale", "Milano", "Disponibile"</small>
+            </div>
+            <div class="col-md-5 text-center d-none d-md-flex justify-content-center align-items-center">
+                <div class="d-flex align-items-center justify-content-center rounded-circle" style="width: 220px; height: 220px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12);">
+                    <i class="ti ti-building-estate" style="font-size: 90px; color: rgba(255,255,255,0.7);"></i>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    {{-- BANNER PROMO --}}
-    <section class="py-5 text-center bg-light">
-        <div class="container">
-            <h2 class="fw-bold mb-3">Offerte Speciali</h2>
-            <p class="text-muted mb-4">Scopri le migliori proposte immobiliari del mese</p>
-            <a href="#" class="btn btn-primary btn-lg">Scopri Ora</a>
-        </div>
-    </section>
 
-    {{-- STATISTICHE --}}
-    <section class="py-5 bg-white">
-        <div class="container">
-            <div class="row text-center g-4">
-                <div class="col-md-3">
-                    <div class="p-4 shadow rounded-4 shadow-hover">
-                        <i class="bi bi-house-door-fill fs-1 text-primary"></i>
-                        <h3 class="mt-2">120</h3>
-                        <p>Immobili</p>
-                    </div>
+
+{{-- STATISTICHE --}}
+<section style="padding: 60px 0; background: #f8fafc;">
+    <div class="container">
+        <div class="row g-4 text-center">
+            <div class="col-6 col-md-3">
+                <div class="bg-white rounded-4 p-4" style="border: 1px solid #e8eef5;">
+                    <i class="ti ti-building" style="font-size: 32px; color: #185FA5;"></i>
+                    <h3 class="fw-bold mt-2 mb-1" style="color: #0a2342;">120</h3>
+                    <p class="text-muted small mb-0">Immobili</p>
                 </div>
-                <div class="col-md-3">
-                    <div class="p-4 shadow rounded-4">
-                        <i class="bi bi-people-fill fs-1 text-primary"></i>
-                        <h3 class="mt-2">85</h3>
-                        <p>Utenti registrati</p>
-                    </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="bg-white rounded-4 p-4" style="border: 1px solid #e8eef5;">
+                    <i class="ti ti-users" style="font-size: 32px; color: #185FA5;"></i>
+                    <h3 class="fw-bold mt-2 mb-1" style="color: #0a2342;">85</h3>
+                    <p class="text-muted small mb-0">Utenti registrati</p>
                 </div>
-                <div class="col-md-3">
-                    <div class="p-4 shadow rounded-4">
-                        <i class="bi bi-tags-fill fs-1 text-primary"></i>
-                        <h3 class="mt-2">50</h3>
-                        <p>Vendite completate</p>
-                    </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="bg-white rounded-4 p-4" style="border: 1px solid #e8eef5;">
+                    <i class="ti ti-rosette" style="font-size: 32px; color: #185FA5;"></i>
+                    <h3 class="fw-bold mt-2 mb-1" style="color: #0a2342;">50</h3>
+                    <p class="text-muted small mb-0">Vendite completate</p>
                 </div>
-                <div class="col-md-3">
-                    <div class="p-4 shadow rounded-4">
-                        <i class="bi bi-calendar-check-fill fs-1 text-primary"></i>
-                        <h3 class="mt-2">30</h3>
-                        <p>Nuovi annunci</p>
-                    </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="bg-white rounded-4 p-4" style="border: 1px solid #e8eef5;">
+                    <i class="ti ti-calendar-plus" style="font-size: 32px; color: #185FA5;"></i>
+                    <h3 class="fw-bold mt-2 mb-1" style="color: #0a2342;">30</h3>
+                    <p class="text-muted small mb-0">Nuovi annunci</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    {{-- IMMOBILI RECENTI --}}
-    <section class="py-5 bg-light">
-        <div class="container">
+{{-- IMMOBILI RECENTI --}}
+<section style="padding: 60px 0; background: #fff;">
+    <div class="container">
+        <h2 class="fw-bold mb-1" style="color: #0a2342;">Immobili recenti</h2>
+        <p class="text-muted mb-4">Le ultime proprietà aggiunte alla piattaforma</p>
 
-            <h2 class="fw-bold mb-4">Immobili Recenti</h2>
+        <div class="row g-4">
+            @foreach ($properties->take(6) as $property)
+            <div class="col-md-4">
+                <div class="rounded-4 overflow-hidden h-100 d-flex flex-column" style="border: 1px solid #e8eef5; transition: transform 0.2s, box-shadow 0.2s;">
 
-            <div class="row g-4">
-                @foreach ($properties->take(6) as $property)
-                    <div class="col-md-4">
+                    @if ($property->images->isNotEmpty())
+                        <img src="{{ Storage::url($property->images->first()->path) }}"
+                            style="height: 220px; object-fit: cover; width: 100%;"
+                            alt="{{ $property->title }}">
+                    @else
+                        <div class="d-flex align-items-center justify-content-center" style="height: 190px; background: linear-gradient(135deg, #185FA5, #1a8a6e);">
+                            <i class="ti ti-building" style="font-size: 48px; color: rgba(255,255,255,0.5);"></i>
+                        </div>
+                    @endif
 
-                        <div class="card h-100 shadow-sm rounded-4 hover-shadow">
-
-                            @if ($property->image)
-                                <img src="{{ asset('storage/' . $property->image) }}" class="card-img-top"
-                                    style="height:200px; object-fit:cover;" alt="{{ $property->title }}">
+                    <div class="p-4 d-flex flex-column flex-grow-1">
+                        <h5 class="fw-semibold mb-1" style="color: #0a2342;">{{ $property->title }}</h5>
+                        <p class="text-muted small mb-3">{{ Str::limit($property->description, 80) }}</p>
+                        <div class="mt-auto d-flex justify-content-between align-items-center">
+                            @if ($property->status == 'Disponibile')
+                                <span class="rounded-2 px-2 py-1" style="background: #e8f8f2; color: #0f6e56; font-size: 12px;">Disponibile</span>
+                            @else
+                                <span class="rounded-2 px-2 py-1" style="background: #f5f5f5; color: #6c757d; font-size: 12px;">Non disponibile</span>
                             @endif
-
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">{{ $property->title }}</h5>
-                                <p class="card-text text-truncate">{{ Str::limit($property->description, 80) }}</p>
-                                <div class="mt-auto d-flex justify-content-between align-items-center">
-                                    @if ($property->status == 'Disponibile')
-                                        <span class="badge bg-success">{{$property->status}}</span>
-                                    @else
-                                        <span class="badge bg-secondary">{{$property->status}}</span>
-                                    @endif
-                                    <a href="#" class="btn btn-primary btn-sm">Dettagli</a>
-                                </div>
-                            </div>
+                            <a href="{{ route('properties.show', $property) }}" class="btn btn-sm px-3" style="background: #185FA5; color: #fff; border-radius: 8px; font-size: 13px;">
+                                Dettagli
+                            </a>
                         </div>
                     </div>
-                @endforeach
-
+                </div>
             </div>
+            @endforeach
         </div>
-    </section>
+    </div>
+</section>
 
 </x-layout>
