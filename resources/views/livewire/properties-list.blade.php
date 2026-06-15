@@ -8,8 +8,8 @@
                     
                     {{-- Mini immagine a sinistra --}}
                     <div class="property-image flex-shrink-0">
-                        @if($property->image)
-                            <img src="{{ asset('storage/' . $property->image) }}" 
+                       @if ($property->images->isNotEmpty())
+                            <img src="{{ Storage::url($property->images->first()->path) }}" 
                                  class="img-fluid rounded-start" 
                                  style="width:200px; height:200px; object-fit:cover;">
                         @else

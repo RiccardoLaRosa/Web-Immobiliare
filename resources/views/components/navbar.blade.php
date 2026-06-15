@@ -1,25 +1,53 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
-    <div class="container-fluid">
-        <a class="navbar-brand fw-bold text-primary" href="/">ImmobiliLive</a>
+<nav class="navbar navbar-expand-lg shadow-sm" style="background:#fff; border-bottom:1px solid rgba(0,0,0,0.08); min-height:72px;">
+    <div class="container">
 
-        <div>
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="{{route('home')}}">Home</a></li>
+        <a class="navbar-brand d-flex align-items-center gap-2 fw-semibold" href="{{ route('home') }}" style="font-size:20px; color:#0d1b2a;">
+            <i class="ti ti-building-estate" style="font-size:26px; color:#185FA5;"></i>
+            ImmobiliLive
+        </a>
 
-                <li class="nav-item"><a class="nav-link" href="{{route('properties.index')}}">Annunci</a></li>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navMenu">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-1">
+                <li class="nav-item">
+                    <a class="nav-link rounded-3 px-3" href="{{ route('home') }}" style="font-size:15px;">
+                        <i class="ti ti-home me-1" style="vertical-align:-2px;"></i>Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link rounded-3 px-3" href="{{ route('properties.index') }}" style="font-size:15px;">
+                        <i class="ti ti-list me-1" style="vertical-align:-2px;"></i>Annunci
+                    </a>
+                </li>
                 @auth
-                <li class="nav-item"><a class="nav-link" href="/dashboard">Dashboard</a></li>
-                    <form action="{{route('logout')}}" method="POST">
+                <li class="nav-item">
+                    <a class="nav-link rounded-3 px-3" href="/dashboard" style="font-size:15px;">
+                        <i class="ti ti-layout-dashboard me-1" style="vertical-align:-2px;"></i>Dashboard
+                    </a>
+                </li>
+                @endauth
+            </ul>
+
+            <div class="d-flex align-items-center gap-2">
+                @guest
+                    <a href="{{ route('register') }}" class="btn btn-outline-secondary btn-sm px-4" style="font-size:14px;">Registrati</a>
+                    <a href="{{ route('login') }}" class="btn btn-outline-secondary btn-sm px-4" style="font-size:14px;">Login</a>
+                @endguest
+                @auth
+                    <form action="{{ route('logout') }}" method="POST" class="m-0">
                         @csrf
-                        <li class="ms-2"><button type="submit" class="btn btn-danger ms-1">Logout</button></li>
+                        <button type="submit" class="btn btn-outline-danger btn-sm px-4" style="font-size:14px;">Logout</button>
                     </form>
                 @endauth
-                @guest
-                <li class="nav-item"><a class="nav-link" href="{{route('register')}}">Registrati</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{route('login')}}">Login</a></li>
-                @endguest
-                <li class="nav-item"><a class="btn btn-primary ms-lg-3" href="{{route('properties.create')}}">+ Nuovo Annuncio</a></li>
-            </ul>
+                <div style="width:1px; height:24px; background:rgba(0,0,0,0.1);"></div>
+                <a href="{{ route('properties.create') }}" class="btn btn-primary btn-sm d-flex align-items-center gap-2 px-4" style="font-size:14px; font-weight:500;">
+                    <i class="ti ti-plus" style="font-size:16px;"></i> Nuovo annuncio
+                </a>
+            </div>
         </div>
+
     </div>
 </nav>
