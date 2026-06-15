@@ -1,4 +1,4 @@
-<footer style="background: linear-gradient(135deg, #0a2342 0%, #185FA5 100%); color: #fff; padding: 48px 0 24px;">
+<footer style="background: linear-gradient(135deg, #0a2342 0%, #185FA5 100%); color: #fff; padding: 48px 0 24px;" class="rounded-top-3">
     <div class="container">
         <div class="row g-4 pb-4" style="border-bottom: 1px solid rgba(255,255,255,0.12);">
 

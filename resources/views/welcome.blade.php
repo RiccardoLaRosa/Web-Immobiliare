@@ -1,7 +1,7 @@
 <x-layout>
 
 {{-- HERO --}}
-<section style="background: linear-gradient(135deg, #0a2342 0%, #185FA5 50%, #1a8a6e 100%); padding: 130px 0; color: #fff;">
+<section style="background: linear-gradient(135deg, #0a2342 0%, #185FA5 50%, #1a8a6e 100%); padding: 130px 0; color: #fff;" class="rounded-3 mt-3">
     <div class="container">
         <div class="row align-items-center g-5">
             <div class="col-md-7">

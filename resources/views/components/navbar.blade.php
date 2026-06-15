@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg shadow-sm" style="background:#fff; border-bottom:1px solid rgba(0,0,0,0.08); min-height:72px;">
+<nav class="navbar navbar-expand-lg shadow-sm rounded-3" style="background:#fff; border-bottom:1px solid rgba(0,0,0,0.08); min-height:72px;">
     <div class="container">
 
         <a class="navbar-brand d-flex align-items-center gap-2 fw-semibold" href="{{ route('home') }}" style="font-size:20px; color:#0d1b2a;">
