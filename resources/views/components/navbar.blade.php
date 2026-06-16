@@ -2,7 +2,7 @@
     <div class="container">
 
         <a class="navbar-brand d-flex align-items-center gap-2 fw-semibold" href="{{ route('home') }}" style="font-size:20px; color:#0d1b2a;">
-            <i class="ti ti-building-estate" style="font-size:26px; color:#185FA5;"></i>
+            <i class="bi bi-buildings"></i>
             ImmobiliLive
         </a>
 
@@ -24,7 +24,7 @@
                 </li>
                 @auth
                 <li class="nav-item">
-                    <a class="nav-link rounded-3 px-3" href="/dashboard" style="font-size:15px;">
+                    <a class="nav-link rounded-3 px-3" href="{{ route('dashboard') }}" style="font-size:15px;">
                         <i class="ti ti-layout-dashboard me-1" style="vertical-align:-2px;"></i>Dashboard
                     </a>
                 </li>

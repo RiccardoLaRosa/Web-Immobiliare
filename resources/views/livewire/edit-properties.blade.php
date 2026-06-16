@@ -1,4 +1,5 @@
-<div class="d-flex flex-column justify-content-center align-items-center mt-1 @if (!$editmode) d-none @endif">
+<div
+    class="d-flex flex-column justify-content-center align-items-center mt-1 @if (!$editmode) d-none @endif">
 
     <form wire:submit='editProperties' class="w-75">
 
@@ -62,6 +63,51 @@
             @error('status')
                 <div class="alert alert-danger">{{ $message }}</div>
             @enderror
+        </div>
+
+        {{-- Immagini esistenti --}}
+        @if ($existingImages)
+            <div class="mb-3">
+                <label class="form-label fw-semibold">Immagini attuali</label>
+                <div class="d-flex flex-wrap gap-2">
+                    @foreach ($existingImages as $img)
+                        <div class="position-relative">
+                            <img src="{{ Storage::url($img['path']) }}" class="rounded"
+                                style="width:80px; height:80px; object-fit:cover;
+                                opacity: {{ in_array($img['id'], $imagesToDelete) ? '0.3' : '1' }};">
+                            @if (in_array($img['id'], $imagesToDelete))
+                                <button type="button" class="btn btn-sm btn-success position-absolute top-0 end-0"
+                                    wire:click="undoDelete({{ $img['id'] }})">
+                                    <i class="bi bi-arrow-counterclockwise"></i>
+                                </button>
+                            @else
+                                <button type="button" class="btn btn-sm btn-danger position-absolute top-0 end-0"
+                                    wire:click="markForDeletion({{ $img['id'] }})">
+                                    <i class="bi bi-x"></i>
+                                </button>
+                            @endif
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        @endif
+
+        {{-- Nuove immagini --}}
+        <div class="mb-3">
+            <label class="form-label fw-semibold">Aggiungi nuove immagini</label>
+            <input type="file" class="form-control" wire:model="newImages" multiple accept="image/*">
+            @error('newImages.*')
+                <span class="text-danger small">{{ $message }}</span>
+            @enderror
+
+            @if ($newImages)
+                <div class="d-flex flex-wrap gap-2 mt-2">
+                    @foreach ($newImages as $img)
+                        <img src="{{ $img->temporaryUrl() }}" class="rounded"
+                            style="width:80px; height:80px; object-fit:cover;">
+                    @endforeach
+                </div>
+            @endif
         </div>
 
         <button type="submit" class="btn btn-primary">Modifica</button>
