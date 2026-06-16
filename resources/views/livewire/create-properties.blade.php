@@ -9,7 +9,7 @@
     <form wire:submit="createProperties" class="col-6">
 
         <div class="mb-3">
-            <label for="title" class="form-label">Titolo Proprietà</label>
+            <label for="title" class="form-label mt-5">Titolo Proprietà</label>
             <input type="text" class="form-control" id="title" wire:model="title">
             @error('title')
                 <div class="alert alert-danger">{{ $message }}</div>
@@ -18,7 +18,7 @@
 
         <div class="mb-3">
             <label for="description" class="form-label">Descrizione</label>
-            <input type="text" class="form-control" id="description" wire:model="description">
+            <textarea rows="6" class="form-control" id="description" wire:model="description"></textarea>
             @error('description')
                 <div class="alert alert-danger">{{ $message }}</div>
             @enderror
@@ -82,7 +82,7 @@
             @enderror
         </div>
 
-        <button type="submit" class="btn btn-primary mb-5" wire:loading.attr="disabled">
+        <button type="submit" class="btn btn-primary mb-5 mt-4" wire:loading.attr="disabled">
             <span wire:loading.remove wire:target="createProperties">Inserisci</span>
             <span wire:loading wire:target="createProperties">Salvataggio...</span>
         </button>

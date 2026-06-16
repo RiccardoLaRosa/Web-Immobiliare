@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div class="d-flex" style="min-height:100vh;">
+    <div class="d-flex container" style="min-height:100vh;">
 
         {{-- ── Sidebar ── --}}
         <div class="sidebar">
