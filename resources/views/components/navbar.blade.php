@@ -7,7 +7,7 @@
             <div class="d-flex align-items-center justify-content-center rounded-3" style="width: 32px; height: 32px; background: linear-gradient(135deg, #7C3AED, #06B6D4);">
                 <i class="ti ti-building" style="font-size: 18px; color: #FFF;"></i>
             </div>
-            Immobili<span style="background: linear-gradient(90deg, #7C3AED, #06B6D4); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Live</span>
+            Immobili<span style="background: linear-gradient(90deg, #7C3AED, #188ea3); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Live</span>
         </a>
 
         <!-- Toggler Menu Mobile customizzato per non rompere il minimalismo -->

@@ -14,11 +14,11 @@
 
         {{-- ── Sidebar ── --}}
         <div class="sidebar">
-            <div class="sidebar-brand">
-                <i class="bi bi-buildings"></i> ImmobiliLive
-            </div>
+            <h3><a class="navbar-brand fw-bold text-white mt-4 border-bottom pb-2" href="/">Immobili<span
+                        style="background: linear-gradient(90deg, #7C3AED, #188ea3); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Live</span></a>
+            </h3>
 
-            <div class="user-card">
+            <div class="user-card mt-4">
                 <div class="avatar"><i class="bi bi-person"></i></div>
                 <div>
                     <div class="user-name">{{ auth()->user()->name }}</div>
@@ -26,21 +26,22 @@
                 </div>
             </div>
 
-            <a href="{{ route('dashboard') }}" class="nav-item-link {{ request()->is('dashboard') ? 'active' : '' }}">
+            <a href="{{ route('dashboard') }}" class="nav-item-link {{ request()->is('dashboard') ? 'active' : '' }} fs-5">
                 <i class="bi bi-grid-1x2"></i> Dashboard
             </a>
-            <a href="{{ route('home') }}" class="nav-item-link {{ request()->is('properties*') ? 'active' : '' }}">
+            <a href="{{ route('home') }}" class="nav-item-link {{ request()->is('properties*') ? 'active' : '' }} fs-5">
                 <i class="bi bi-house"></i> Home </a>
-            <a href="{{ route('properties.create') }}" class="nav-item-link {{ request()->is('properties/create') ? 'active' : '' }}">
+            <a href="{{ route('properties.create') }}"
+                class="nav-item-link {{ request()->is('properties/create') ? 'active' : '' }} fs-5">
                 <i class="bi bi-plus-circle"></i> Nuovo annuncio
             </a>
-            <a href="/profile" class="nav-item-link {{ request()->is('profile*') ? 'active' : '' }}">
+            <a href="/profile" class="nav-item-link {{ request()->is('profile*') ? 'active' : '' }} fs-5">
                 <i class="bi bi-person-circle"></i> Profilo
             </a>
 
             <form method="POST" action="{{ route('logout') }}" class="mt-auto">
                 @csrf
-                <button type="submit" class="logout-link border-0 bg-transparent w-100 text-start">
+                <button type="submit" class="logout-link border-0 bg-transparent w-100 text-start fs-5">
                     <i class="bi bi-box-arrow-right"></i> Logout
                 </button>
             </form>
@@ -52,7 +53,7 @@
             <h1 class="fw-bold fs-4 mb-1" style="color:#1a1a2e;">
                 Bentornato, {{ auth()->user()->name }}
             </h1>
-            <p class="text-secondary mb-4">Ecco il riepilogo della tua attività</p>
+            <h4 class="text-white mb-4">Ecco il riepilogo della tua attività</h4>
 
             {{-- Stat cards --}}
             <div class="row g-3 mb-0">
@@ -89,14 +90,14 @@
             <div class="listings-card">
                 <div class="listings-title">I tuoi annunci recenti</div>
 
-               
 
-            {{-- Livewire components --}}
-            <livewire-edit-properties></livewire-edit-properties>
-            <livewire-dashboard-list></livewire-dashboard-list>
+
+                {{-- Livewire components --}}
+                <livewire-edit-properties></livewire-edit-properties>
+                <livewire-dashboard-list></livewire-dashboard-list>
+            </div>
+
         </div>
-
-    </div>
 </body>
 
 </html>

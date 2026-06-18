@@ -215,9 +215,10 @@
             <div class="row g-4">
                 @foreach ($properties->take(3) as $property)
                     <div class="col-lg-4 col-md-6">
-                        <div class="glass-ux-card rounded-5 h-100 d-flex flex-column overflow-hidden p-3">
+                        <a href="{{ route('properties.show', $property) }}">
+                            <div class="glass-ux-card rounded-5 h-100 d-flex flex-column overflow-hidden p-3">
 
-                            {{-- Immagine Contenuta con overlay scuro ed angoli ampi --}}
+                            {{-- Immagine Contenuta con overlay scuro --}}
                             <div class="position-relative overflow-hidden rounded-4" style="height: 250px;">
                                 @if ($property->images->isNotEmpty())
                                     <img src="{{ Storage::url($property->images->first()->path) }}"
@@ -269,7 +270,7 @@
                                     </a>
                                 </div>
                             </div>
-
+                        </a>
                         </div>
                     </div>
                 @endforeach

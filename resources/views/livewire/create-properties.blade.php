@@ -1,4 +1,4 @@
-<div class="d-flex flex-column justify-content-center align-items-center mt-5">
+<div class="d-flex flex-column justify-content-center align-items-center" style="margin-top: 120px !important;">
 
     <h3 class="border-bottom p-1">Inserisci il tuo Immobile</h3>
 

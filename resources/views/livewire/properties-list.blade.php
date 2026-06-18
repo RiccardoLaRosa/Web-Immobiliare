@@ -10,6 +10,7 @@
     <div class="row g-4">
         @foreach ($properties as $property)
             <div class="col-12 col-md-6 col-lg-6">
+                <a href="{{ route('properties.show', $property) }}" class="text-decoration-none">
                 <div class="card h-100 shadow-lg rounded-4 border-0 hover-shadow d-flex flex-row"
                     style="background-color: rgb(228, 228, 228)">
 
@@ -45,6 +46,7 @@
                     </div>
 
                 </div>
+                </a>
             </div>
         @endforeach
     </div>
