@@ -75,8 +75,15 @@ class PropertyController extends Controller
 
             return view('properties.filtered', compact('properties'));
         }
+
         if($request->cityInput) {
             $properties = Property::where('city','LIKE', '%'.$request->cityInput.'%')->get();
+
+            return view('properties.filtered', compact('properties'));
+        }
+
+        if($request->roomsInput) {
+            $properties = Property::where('rooms','LIKE', '%'.$request->roomsInput.'%')->get();
 
             return view('properties.filtered', compact('properties'));
         }
