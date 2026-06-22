@@ -128,6 +128,17 @@
                     </div>
                 </div>
 
+                 <!-- Linea di chiusura inferiore -->
+                <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center pt-3 border-top border-dark mt-5">
+                    <small class="text-muted">
+                        &copy; {{ date('Y') }} ImmobiliLive. Tutti i diritti riservati.
+                    </small>
+                    <div class="d-flex gap-3 mt-2 mt-sm-0">
+                        <a href="#" class="text-muted small text-decoration-none">Privacy</a>
+                        <a href="#" class="text-muted small text-decoration-none">Termini</a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>

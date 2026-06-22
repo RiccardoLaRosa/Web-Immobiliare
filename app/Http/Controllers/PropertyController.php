@@ -90,4 +90,8 @@ class PropertyController extends Controller
             return back();
 
     }
+
+    public function marketAnalysis() {
+        return view('market.analysis');
+    }
 }

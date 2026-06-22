@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-lg fixed-top crystal-navbar container rounded-4 mt-3 p-0">
     <div class="container">
 
-        <!-- BRAND / LOGO: Trattamento Tipografico d'Autore -->
+        {{-- BRAND / LOGO: Trattamento Tipografico d'Autore --}}
         <a class="navbar-brand d-flex align-items-center gap-2 fw-extrabold" href="{{ route('home') }}" style="font-size: 22px; color: #0F172A; letter-spacing: -0.04em;">
             <div class="d-flex align-items-center justify-content-center rounded-3" style="width: 32px; height: 32px; background: linear-gradient(135deg, #7C3AED, #06B6D4);">
                 <i class="ti ti-building" style="font-size: 18px; color: #FFF;"></i>
@@ -10,7 +10,7 @@
             Immobili<span style="background: linear-gradient(90deg, #7C3AED, #188ea3); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Live</span>
         </a>
 
-        <!-- Toggler Menu Mobile customizzato per non rompere il minimalismo -->
+        {{-- Toggler Menu Mobile customizzato --}}
         <button class="navbar-toggler border-0 p-2" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" style="background: rgba(15,23,42,0.04); border-radius: 8px;">
             <i class="ti ti-menu-2" style="color: #0F172A; font-size: 22px;"></i>
         </button>
@@ -28,6 +28,11 @@
                         <i class="ti ti-search" style="font-size: 16px;"></i> Annunci
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link rounded-3 px-3 py-2 ux-nav-link d-inline-flex align-items-center gap-2" href="{{ route('market.analysis') }}" style="font-size: 16px;">
+                        <i class="bi bi-graph-up" style="font-size: 16px;"></i> Analisi di Mercato
+                    </a>
+                </li>
                 @auth
                 <li class="nav-item">
                     <a class="nav-link rounded-3 px-3 py-2 ux-nav-link d-inline-flex align-items-center gap-2" href="{{ route('dashboard') }}" style="font-size: 16px;">
@@ -37,7 +42,7 @@
                 @endauth
             </ul>
 
-            <!-- Area Utente & Call to Action -->
+            <!-- Area Utente -->
             <div class="d-flex align-items-center gap-3 flex-wrap mt-3 mt-lg-0">
                 
                 @guest
@@ -54,7 +59,7 @@
                     </form>
                 @endauth
                 
-                <!-- Separatore Verticale Minimal -->
+                <!-- Separatore Verticale -->
                 <div class="d-none d-lg-block" style="width: 1px; height: 20px; background: rgba(15, 23, 42, 0.08);"></div>
                 
                 <!-- Bottone CTA Principale -->

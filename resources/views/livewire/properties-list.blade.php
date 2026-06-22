@@ -1,12 +1,29 @@
 <div class="container mt-2" style="margin-top: 150px !important;">
 
-    {{-- BARRA FILTRI ORIZZONTALE (In alto) --}}
+     <!-- Intestazione -->
+            <div class="mb-5 mt-5">
+                <div class="d-inline-flex align-items-center gap-2 px-3 py-2 rounded-pill mb-3"
+                    style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);">
+                    <span style="width: 6px; height: 6px; background: var(--neon-cyan); display: inline-block;"
+                        class="rounded-circle animate-pulse"></span>
+                    <span
+                        style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--text-muted); font-weight: 600;">
+                        Marketplace
+                    </span>
+                </div>
+                <h2 class="fw-bold m-0 text-white" style="font-size: 2.5rem; letter-spacing: -0.03em;">
+                    Trova la tua nuova <span class="text-gradient-neon">Casa</span>
+                </h2>
+                <p class="text-white opacity-70 m-0 mt-2">Esplora centinaia di annunci immobiliari verificati in tutta Italia..</p>
+            </div>
+
+    {{-- Filtro Ricerca --}}
     <div class="card shadow-sm rounded-4 border-0 p-4 mb-5" style="background-color: #f8f9fa;">
         <h5 class="fw-bold"><i class="bi bi-sliders me-2"></i>Filtra Ricerca</h5>
         <x-filter-home :properties="$properties"></x-filter-home>
     </div>
 
-    {{-- GRIGLIA PROPRIETÀ (In basso) --}}
+    {{-- Griglia Proprietà --}}
     <div class="row g-4">
         @foreach ($properties as $property)
             <div class="col-12 col-md-6 col-lg-6">

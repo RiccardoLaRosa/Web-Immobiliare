@@ -9,4 +9,5 @@ Route::get('/dashboard', function () {
 })->name('dashboard')->middleware('auth');
 Route::get('/properties/create', [PropertyController::class,'create'])->name('properties.create')->middleware('auth');
 Route::get('/properties/filter', [PropertyController::class,'filter'])->name('property.filter');
+Route::get('/market/analysis', [PropertyController::class,'marketAnalysis'])->name('market.analysis');
 Route::resource('properties', PropertyController::class) ->except(['create']);

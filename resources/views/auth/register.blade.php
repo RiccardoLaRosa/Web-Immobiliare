@@ -1,10 +1,12 @@
 
 <x-layout>
-    <div class=" container-fluid  h-100 p-0">
+    <div class=" container-fluid  h-100 p-0" style= "margin-top: 150px; margin-bottom: 120px">
         <div class="d-flex flex-column justify-content-center align-items-center mt-5 ">
-            <h1><a class="navbar-brand fw-semibold text-primary mt-4 border-bottom pb-2" href="/">ImmobiliLive</a></h1>
+           <h1><a class="navbar-brand fw-bold text-white mt-4 border-bottom pb-2" href="/">Immobili<span
+                        style="background: linear-gradient(90deg, #7C3AED, #188ea3); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Live</span></a>
+            </h1>
             <h2 class="m-3">Registrati sul nostro sito</h2>
-            <form action="{{ route('register.store') }}" method="POST" class="ms-3 mt-3 col-5">
+            <form action="{{ route('register.store') }}" method="POST" class="ms-3 mt-3 col-3">
                 @csrf
                 <div class="mb-3">
                     <label for="exampleInputname" class="form-label"><span class="fs-5 fw-semibold">Nome</span></label>
